@@ -59,6 +59,8 @@ exports.findAll = (req, res) => {
 exports.findOne = (req, res) => {
     const id = req.params.id;
 
+    
+
     Trip.findById(id)
         .then(data => {
             if (!data)
