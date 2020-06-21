@@ -59,8 +59,6 @@ exports.findAll = (req, res) => {
 exports.findOne = (req, res) => {
     const id = req.params.id;
 
-    
-
     Trip.findById(id)
         .then(data => {
             if (!data)
@@ -82,6 +80,7 @@ exports.update = (req, res) => {
     }
 
     const id = req.params.id;
+    console.log(id);
 
     Trip.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
         .then(data => {
